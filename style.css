@@ -2,63 +2,74 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #222;
+  font-family: Arial, sans-serif;
+  background-color: hsl(197, 48%, 37%);
 }
 
+/* Navigation */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 15px 30px;
   background-color: #222;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 .navbar h1 a {
-  color: rgb(245, 241, 241);
+  color: white;
   text-decoration: none;
 }
 
 .navbar ul {
   display: flex;
-  gap: 30px;
   list-style: none;
+  gap: 20px;
 }
 
 .navbar ul li a {
-  color: rgb(255, 244, 244);
+  color: rgb(238, 237, 248);
   text-decoration: none;
-  transition: 0.3s ease;
 }
 
-.navbar ul li a:hover {
-  color: rgb(44, 4, 204);
-  transform: translateY(-3px);
+/* Boxes */
+.box {
+  width: 90%;
+  max-width: 1000px;
+  height: 400px;
+  margin: 30px auto;
+  background-color: rgb(253, 245, 245);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
 }
 
-section {
-  min-height: 100vh;
-  padding: 100px 40px;
+/* Image fits perfectly inside the box */
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-#home {
-  background-color: #ebebeb;
+/* Text on top of image */
+.box-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  color: rgb(237, 241, 243);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
 }
 
-#contact {
-  background-color: #59b8dd;
+.box-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
-#email {
-  background-color: #7655ca;
+.box-content p {
+  font-size: 18px;
 }
